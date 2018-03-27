@@ -5,7 +5,7 @@ import { Guide, Step } from '../../tractorPull/dist';
 
 const specs:Step[] = [
 
-  new Step('Navigate to Home Page', 'When you navigate to the home page, you should see a list of Pokemon.', null, function () {
+  new Step('TP for my bung hole', 'When you navigate to the home page, you should see a list of Pokemon.', null, function () {
     let page:PokemonPage = new PokemonPage();
     page.navigateTo();
   }),
@@ -16,15 +16,12 @@ const specs:Step[] = [
     page.getFirstPokemonCardElement().click();
   }),
 
-  new Step('Navigate between Pokemon Details', 'By clicking the arrow on the left of a Pokemon detail listing, you can navigate to the next Pokemon\'s details.', '.modal__inner', function () {
+  new Step('Navigate between Pokemon Details', 'By clicking the arrows on the left and right of a Pokemon detail listing, you can navigate to the next or previous Pokemon\'s details.', '.modal__inner', function () {
     let page:PokemonPage = new PokemonPage();
     page.navigateTo();
     page.getFirstPokemonCardElement().click();
     page.selectNextKey();
-  }),
 
-  new Step('Navigate between Pokemon Details', 'By clicking the arrow on the right of a Pokemon detail listing, you can navigate to the previous Pokemon\'s details.', '.modal__inner', function () {
-    let page:PokemonPage = new PokemonPage();
     page.selectPrevKey();
     page.selectPrevKey();
   })
@@ -32,5 +29,5 @@ const specs:Step[] = [
 ];
 
 
-new Guide('Using the Pokemon Viewer', 'This guide takes you through the steps of viewing the various Pokemon.', ...specs);
+new Guide('I am Cornholio!', 'This guide takes you through the steps of viewing the various Pokemon.', ...specs);
 
